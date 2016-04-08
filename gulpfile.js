@@ -1,6 +1,5 @@
 /*global -$ */
 'use strict';
-// generated on 2015-06-11 using generator-gulp-webapp 0.3.0
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
@@ -99,7 +98,7 @@ gulp.task('less', function () {
     'opera >= 23'
   ];
 
-  return gulp.src(['./app/src/css/**/*.less', '!./app/src/css/Common/include/*.less'])
+  return gulp.src(['./app/src/css/**/*.less'])
     .pipe($.plumber())
     .pipe($.changed(config.dist + 'src/css', {extension: '.css'}))
     .pipe($.sourcemaps.init())
